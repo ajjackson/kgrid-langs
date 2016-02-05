@@ -108,3 +108,27 @@ less done for us than in scientific computing environments like MATLAB
 or Julia. On the other hand, there is a certain satisfaction in being
 this close to the libraries we are using and perhaps some
 unnecessary/counter-productive actions can be avoided as a result...
+
+## Julia
+
+[Jarvist](http://github.com/jarvist) says of Julia: "Just use it!"
+
+The syntax of Julia lies somewhere between Python and Matlab, which I
+have used "in anger" plenty of times, while the design has hints of
+Lisp, which I aspire to use more. As such, linear algebra and complex
+numbers are "baked in", and the language should be quite "batteries
+included" although it is still quite young. The macro system also
+looks quite powerful, so Julia could compete with Scheme for
+domain-specific language tricks.
+
+The resulting code and implementation of kgrid is *very* terse and
+easy to understand, so it looks like Julia is very well-suited to
+expressing the kind of problems I deal with day-to-day. However,
+running Julia scripts has about a second of overhead time as libraries
+are parsed and the just-in-time compiler (JIT) is run. As a result,
+while this is the nicest code for the program, it is also the
+implementation I would be least likely to actually use. For more
+complex tasks involving larger data sets, Julia should greatly
+out-perform Python. It seems a poor choice for small quick tasks,
+though! It's a shame there is no way to compile a static binary as
+there is with Chicken, as this could negate that downside.
